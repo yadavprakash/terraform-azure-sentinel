@@ -3,14 +3,14 @@ provider "azurerm" {
 }
 
 module "resource_group" {
-  source      = "git::https://github.com/opsstation/terraform-azure-resource-group.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-azure-resource-group.git?ref=v1.0.0"
   name        = "app"
   environment = "tested"
   location    = "North Europe"
 }
 
 module "log-analytics" {
-  source                           = "git::https://github.com/opsstation/terraform-azure-log-analytics.git?ref=v1.0.0"
+  source                           = "git::https://github.com/yadavprakash/terraform-azure-log-analytics.git?ref=v1.0.0"
   name                             = "app"
   environment                      = "test"
   resource_group_name              = module.resource_group.resource_group_name
@@ -26,3 +26,5 @@ module "sentinel" {
   environment                = "test"
   log_analytics_workspace_id = module.log-analytics.workspace_id
 }
+
+

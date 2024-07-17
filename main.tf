@@ -1,5 +1,5 @@
 module "labels" {
-  source      = "git::https://github.com/opsstation/terraform-azure-labels.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-azure-labels.git?ref=v1.0.0"
   name        = var.name
   environment = var.environment
   managedby   = var.managedby
@@ -79,3 +79,4 @@ resource "azurerm_sentinel_data_connector_threat_intelligence" "main" {
   name                       = format("%s-data-connector-threat-intelligence", module.labels.id)
   log_analytics_workspace_id = join("", azurerm_sentinel_log_analytics_workspace_onboarding.main[*].workspace_id)
 }
+

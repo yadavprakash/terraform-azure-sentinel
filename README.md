@@ -24,7 +24,7 @@ The "vnet" module creates an Azure Virtual Network. It references the resource g
 
 ```hcl
 module "sentinel" {
-  source                     = "git::https://github.com/opsstation/terraform-azure-sentinel.git?ref=v1.0.0"
+  source                     = "git::https://github.com/yadavprakash/terraform-azure-sentinel.git?ref=v1.0.0"
   name                       = "app"
   environment                = "test"
   log_analytics_workspace_id = module.log-analytics.workspace_id
@@ -47,10 +47,10 @@ This module provides the following outputs:
 - 'resource_group_location': The location of the created Azure resource group.
 
 # Examples
-For detailed examples on how to use this module, please refer to the '[example](https://github.com/opsstation/terraform-azure-sentinel/blob/master/_example)' directory within this repository.
+For detailed examples on how to use this module, please refer to the '[example](https://github.com/yadavprakash/terraform-azure-sentinel/blob/master/_example)' directory within this repository.
 
 # License
-This Terraform module is provided under the '[License Name]' License. Please see the [LICENSE](https://github.com/opsstation/terraform-azure-sentinel/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the '[License Name]' License. Please see the [LICENSE](https://github.com/yadavprakash/terraform-azure-sentinel/blob/master/LICENSE) file for more details.
 
 # Author
 Your Name
@@ -74,7 +74,7 @@ Replace '[License Name]' and '[Your Name]' with the appropriate license and your
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/opsstation/terraform-azure-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/yadavprakash/terraform-azure-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -110,7 +110,7 @@ Replace '[License Name]' and '[Your Name]' with the appropriate license and your
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. sequence of application name and environment `name`,`environment`,'attribute' [`webserver`,`qa`,`devops`,`public`,] . | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
 | <a name="input_log_analytics_workspace_id"></a> [log\_analytics\_workspace\_id](#input\_log\_analytics\_workspace\_id) | The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created. | `string` | `""` | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'opsstation'. | `string` | `""` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'yadavprakash'. | `string` | `""` | no |
 | <a name="input_ms_security_enabled"></a> [ms\_security\_enabled](#input\_ms\_security\_enabled) | Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to true. | `bool` | `true` | no |
 | <a name="input_ms_security_incident_enabled"></a> [ms\_security\_incident\_enabled](#input\_ms\_security\_incident\_enabled) | Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to true. | `bool` | `true` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
