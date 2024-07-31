@@ -24,7 +24,7 @@ The "vnet" module creates an Azure Virtual Network. It references the resource g
 
 ```hcl
 module "sentinel" {
-  source                     = "git::https://github.com/yadavprakash/terraform-azure-sentinel.git?ref=v1.0.0"
+  source                     = "git::https://github.com/yadavprakash/terraform-azure-sentinel.git"
   name                       = "app"
   environment                = "test"
   log_analytics_workspace_id = module.log-analytics.workspace_id
